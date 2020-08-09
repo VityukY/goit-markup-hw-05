@@ -101,24 +101,24 @@ li {
 	background: #2196f3;
 	border-radius: 2px;
 }
+
 /*навиационная панель вся */
-header {
-	padding-top: 32px;
-	padding-bottom: 32px;
-}
+
 .site-nav .conteiners {
 	display: flex;
 	align-items: center;
 }
+
 /* навиационная панель - логотип */
 .site-nav .logo {
 	color: var(--main-text-color);
 	font-weight: 700;
+	padding-top: 24px;
+	padding-bottom: 25px;
 }
 
 /* навиационная панель - навигация сайта*/
 .site-nav .list {
-	position: relative;
 	display: flex;
 }
 .site-nav .item:first-child {
@@ -133,7 +133,8 @@ header {
 
 .site-nav .link {
 	display: block;
-
+	padding-top: 32px;
+	padding-bottom: 32px;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 14px;
@@ -144,7 +145,6 @@ header {
 .site-nav .link:focus {
 	color: var(--acent-text-color);
 }
-
 /*навиационная панель - навигация контактов*/
 .site-nav .contact {
 	color: var(--secondary-text-color);
