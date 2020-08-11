@@ -142,6 +142,7 @@ li {
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -344,11 +345,14 @@ li {
 	width: 44px;
 	height: 44px;
 	color: #afb1b8;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-socialnetwork {
 	fill: currentColor;
 }
-.team .social-link:hover {
+.team .social-link:hover,
+.team .social-link:focus {
 	color: var(--text-white-color);
 	background-color: var(--acent-text-color);
 	border-radius: 180px;
@@ -389,16 +393,19 @@ li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.client .client-logo {
-	fill: currentColor;
-}
-.client .client-link:hover {
+
+.client .client-link:hover,
+.client .client-link:focus {
 	border: 1px solid #2196f3;
 	border-radius: 4px;
 	color: var(--acent-text-color);
 }
-
+.client .client-logo {
+	fill: currentColor;
+}
 /*футер*/
 .footer {
 	background-color: #2f303a;
@@ -456,6 +463,7 @@ li {
 	height: 44px;
 	border-radius: 180px;
 	background-color: rgba(255, 255, 255, 0.1);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer .social-links:hover,
 .footer .social-links:focus {
@@ -493,8 +501,11 @@ li {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.62;
+	border-radius: 4px;
 
 	background-color: #f5f4fa;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters .button:hover,
@@ -544,16 +555,18 @@ li {
 	line-height: 1.56;
 	letter-spacing: 0.03em;
 }
-.projects .item:hover .description {
+.projects .item:hover .description,
+.projects .item:focus .description {
 	transform: translateY(0);
-
 	opacity: 1;
 }
 .projects .item {
 	max-width: 370px;
 	border: 1px solid #eeeeee;
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.projects .item:hover {
+.projects .item:hover,
+.projects .item:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -587,4 +600,18 @@ li {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.87;
+}
+.modal {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transition: opacity 2s linear;
+	pointer-events: none;
+	opacity: 0;
+	background: rgba(0, 0, 0, 0.2);
+}
+.modal-test:hover .modal {
+	opacity: 1;
 }
