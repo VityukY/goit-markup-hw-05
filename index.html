@@ -57,7 +57,7 @@
 			<section class="hero">
 				<div class="conteiners">
 					<h1 class="title">Эффективные решения для вашего бизнеса</h1>
-					<button class="button">Заказать услугу</button>
+					<button class="button" data-modal-open>Заказать услугу</button>
 				</div>
 			</section>
 
@@ -413,5 +413,9 @@
 			<!--ТУТ место для "подписатся сейчас"  -->
 			<div></div>
 		</footer>
+		<div class="modal is-hidden" data-modal>
+			<div class="modal-inbox"><button data-modal-close>закрыть</button></div>
+		</div>
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
